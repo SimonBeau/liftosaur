@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.liftosaur.wear.spike.wear-mergeDebugResources-50:/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "com.liftosaur.wear.spike.wear-mergeDebugResources-49:/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "C:\\Users\\simon\\.gradle\\caches\\9.0.0\\transforms\\28edfcd7e0709f54cc8b211090b73b4f\\transformed\\material-release\\res\\values-en-rGB\\values-en-rGB.xml",

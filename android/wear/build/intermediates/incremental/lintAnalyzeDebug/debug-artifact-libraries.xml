@@ -1,18 +1,5 @@
 <libraries>
   <library
-      name="androidx.javascriptengine:javascriptengine:1.1.0@aar"
-      jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\7bcc7616c2ee027e9cfc867672eedba1\transformed\javascriptengine-1.1.0\jars\classes.jar"
-      resolved="androidx.javascriptengine:javascriptengine:1.1.0"
-      folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\7bcc7616c2ee027e9cfc867672eedba1\transformed\javascriptengine-1.1.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
       name="androidx.activity:activity:1.10.1@aar"
       jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\bab29d059f1284d2e4f9a311d85b4e17\transformed\activity-1.10.1\jars\classes.jar"
       resolved="androidx.activity:activity:1.10.1"
@@ -221,10 +208,23 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.core:core-ktx:1.15.0@aar"
-      jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\188238ff1033962c1ae44897ee97e03c\transformed\core-ktx-1.15.0\jars\classes.jar"
-      resolved="androidx.core:core-ktx:1.15.0"
-      folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\188238ff1033962c1ae44897ee97e03c\transformed\core-ktx-1.15.0"
+      name="androidx.compose.ui:ui-tooling-android:1.8.3@aar"
+      jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\cb5fbd2219132ba7e5e7c5c70b47e285\transformed\ui-tooling-release\jars\classes.jar"
+      resolved="androidx.compose.ui:ui-tooling-android:1.8.3"
+      folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\cb5fbd2219132ba7e5e7c5c70b47e285\transformed\ui-tooling-release"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.compose.ui:ui-android:1.8.3@aar"
+      jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\764f63b82c10dcfe9bc1edfa3a960260\transformed\ui-release\jars\classes.jar"
+      resolved="androidx.compose.ui:ui-android:1.8.3"
+      folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\764f63b82c10dcfe9bc1edfa3a960260\transformed\ui-release"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -264,19 +264,6 @@
       jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\9dcf21fd6b51993180e3afa22ea40aae\transformed\lifecycle-runtime-release\jars\classes.jar"
       resolved="androidx.lifecycle:lifecycle-runtime-android:2.9.1"
       folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\9dcf21fd6b51993180e3afa22ea40aae\transformed\lifecycle-runtime-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.1@aar"
-      jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\cfb201fcaca3bb0e1395e4692add138c\transformed\lifecycle-viewmodel-savedstate-release\jars\classes.jar"
-      resolved="androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.1"
-      folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\cfb201fcaca3bb0e1395e4692add138c\transformed\lifecycle-viewmodel-savedstate-release"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -381,10 +368,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.ui:ui-android:1.8.3@aar"
-      jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\764f63b82c10dcfe9bc1edfa3a960260\transformed\ui-release\jars\classes.jar"
-      resolved="androidx.compose.ui:ui-android:1.8.3"
-      folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\764f63b82c10dcfe9bc1edfa3a960260\transformed\ui-release"
+      name="androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.1@aar"
+      jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\cfb201fcaca3bb0e1395e4692add138c\transformed\lifecycle-viewmodel-savedstate-release\jars\classes.jar"
+      resolved="androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.1"
+      folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\cfb201fcaca3bb0e1395e4692add138c\transformed\lifecycle-viewmodel-savedstate-release"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -394,10 +381,23 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.ui:ui-tooling-android:1.8.3@aar"
-      jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\cb5fbd2219132ba7e5e7c5c70b47e285\transformed\ui-tooling-release\jars\classes.jar"
-      resolved="androidx.compose.ui:ui-tooling-android:1.8.3"
-      folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\cb5fbd2219132ba7e5e7c5c70b47e285\transformed\ui-tooling-release"
+      name="androidx.core:core-ktx:1.15.0@aar"
+      jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\188238ff1033962c1ae44897ee97e03c\transformed\core-ktx-1.15.0\jars\classes.jar"
+      resolved="androidx.core:core-ktx:1.15.0"
+      folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\188238ff1033962c1ae44897ee97e03c\transformed\core-ktx-1.15.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="io.github.dokar3:quickjs-kt-android:1.0.0-alpha13@aar"
+      jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\299cfdf82480fe2469f32a7d7609cbd6\transformed\quickjs-release\jars\classes.jar"
+      resolved="io.github.dokar3:quickjs-kt-android:1.0.0-alpha13"
+      folder="C:\Users\simon\.gradle\caches\9.0.0\transforms\299cfdf82480fe2469f32a7d7609cbd6\transformed\quickjs-release"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -433,18 +433,6 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-android\1.10.2\c8705d275d81f19e8afaf3ff9b5bf7a4b6b6c19b\kotlinx-coroutines-android-1.10.2.jar"
-      resolved="org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2"/>
-  <library
-      name="org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.10.2@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-core-jvm\1.10.2\4a9f78ef49483748e2c129f3d124b8fa249dafbf\kotlinx-coroutines-core-jvm-1.10.2.jar"
-      resolved="org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.10.2"/>
-  <library
-      name="org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.10.2@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-guava\1.10.2\8e600c59d64897a9e16909d54a4153df147f6a0b\kotlinx-coroutines-guava-1.10.2.jar"
-      resolved="org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.10.2"/>
-  <library
       name="androidx.annotation:annotation-experimental:1.4.1@aar"
       jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\8e28f707bf58a013338c930dd9828c98\transformed\annotation-experimental-1.4.1\jars\classes.jar"
       resolved="androidx.annotation:annotation-experimental:1.4.1"
@@ -457,10 +445,6 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
-  <library
-      name="androidx.concurrent:concurrent-futures:1.1.0@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\androidx.concurrent\concurrent-futures\1.1.0\50b7fb98350d5f42a4e49704b03278542293ba48\concurrent-futures-1.1.0.jar"
-      resolved="androidx.concurrent:concurrent-futures:1.1.0"/>
   <library
       name="androidx.versionedparcelable:versionedparcelable:1.1.1@aar"
       jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\77469c3651bd1ab1c2239d00bfbe027d\transformed\versionedparcelable-1.1.1\jars\classes.jar"
@@ -500,6 +484,14 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1@jar"
+      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-core-jvm\1.8.1\bb0e192bd7c2b6b8217440d36e9758e377e450\kotlinx-coroutines-core-jvm-1.8.1.jar"
+      resolved="org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1"/>
+  <library
+      name="org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1@jar"
+      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-android\1.8.1\73e2acdd18df99dd4849d99f188dff529fc0afe0\kotlinx-coroutines-android-1.8.1.jar"
+      resolved="org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1"/>
+  <library
       name="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.7.3@jar"
       jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-serialization-core-jvm\1.7.3\1f226780b845ff9206474c05159245d861556249\kotlinx-serialization-core-jvm-1.7.3.jar"
       resolved="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.7.3"/>
@@ -511,34 +503,6 @@
       name="org.jetbrains:annotations:23.0.0@jar"
       jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\23.0.0\8cc20c07506ec18e0834947b84a864bfc094484e\annotations-23.0.0.jar"
       resolved="org.jetbrains:annotations:23.0.0"/>
-  <library
-      name="com.google.guava:guava:32.0.1-android@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\32.0.1-android\d3fe54a75aeaca33fc562a2a9c1dc181e54cc5e9\guava-32.0.1-android.jar"
-      resolved="com.google.guava:guava:32.0.1-android"/>
-  <library
-      name="com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"
-      resolved="com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"/>
-  <library
-      name="com.google.guava:failureaccess:1.0.1@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.1\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\failureaccess-1.0.1.jar"
-      resolved="com.google.guava:failureaccess:1.0.1"/>
-  <library
-      name="com.google.code.findbugs:jsr305:3.0.2@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar"
-      resolved="com.google.code.findbugs:jsr305:3.0.2"/>
-  <library
-      name="org.checkerframework:checker-qual:3.33.0@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.33.0\de2b60b62da487644fc11f734e73c8b0b431238f\checker-qual-3.33.0.jar"
-      resolved="org.checkerframework:checker-qual:3.33.0"/>
-  <library
-      name="com.google.errorprone:error_prone_annotations:2.18.0@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.18.0\89b684257096f548fa39a7df9fdaa409d4d4df91\error_prone_annotations-2.18.0.jar"
-      resolved="com.google.errorprone:error_prone_annotations:2.18.0"/>
-  <library
-      name="com.google.j2objc:j2objc-annotations:2.8@jar"
-      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\2.8\c85270e307e7b822f1086b93689124b89768e273\j2objc-annotations-2.8.jar"
-      resolved="com.google.j2objc:j2objc-annotations:2.8"/>
   <library
       name="org.jspecify:jspecify:1.0.0@jar"
       jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\org.jspecify\jspecify\1.0.0\7425a601c1c7ec76645a78d22b8c6a627edee507\jspecify-1.0.0.jar"
@@ -743,6 +707,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="androidx.concurrent:concurrent-futures:1.1.0@jar"
+      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\androidx.concurrent\concurrent-futures\1.1.0\50b7fb98350d5f42a4e49704b03278542293ba48\concurrent-futures-1.1.0.jar"
+      resolved="androidx.concurrent:concurrent-futures:1.1.0"/>
+  <library
       name="androidx.arch.core:core-runtime:2.2.0@aar"
       jars="C:\Users\simon\.gradle\caches\9.0.0\transforms\d95734e6226f8611a4a6fd0c548bb8cd\transformed\core-runtime-2.2.0\jars\classes.jar"
       resolved="androidx.arch.core:core-runtime:2.2.0"
@@ -755,4 +723,8 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
+  <library
+      name="com.google.guava:listenablefuture:1.0@jar"
+      jars="C:\Users\simon\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\1.0\c949a840a6acbc5268d088e47b04177bf90b3cad\listenablefuture-1.0.jar"
+      resolved="com.google.guava:listenablefuture:1.0"/>
 </libraries>

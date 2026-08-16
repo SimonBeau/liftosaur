@@ -113,12 +113,12 @@
             priority="0"/>
         <location
             file="${:wear*projectDir}/build.gradle"
-            line="68"
+            line="67"
             column="31"
-            startOffset="2569"
-            endLine="68"
+            startOffset="2487"
+            endLine="67"
             endColumn="62"
-            endOffset="2600"/>
+            endOffset="2518"/>
     </incident>
 
     <incident
@@ -133,32 +133,40 @@
             priority="0"/>
         <location
             file="${:wear*projectDir}/build.gradle"
-            line="69"
+            line="68"
             column="31"
-            startOffset="2631"
-            endLine="69"
+            startOffset="2549"
+            endLine="68"
             endColumn="59"
-            endOffset="2659"/>
+            endOffset="2577"/>
     </incident>
 
     <incident
         id="NewerVersionAvailable"
         severity="warning"
-        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-guava than 1.10.2 is available: 1.11.0">
+        message="A newer version of io.github.dokar3:quickjs-kt than 1.0.0-alpha13 is available: 1.0.14">
         <fix-replace
-            description="Change to 1.11.0"
+            description="Change to 1.0.14"
             family="Update versions"
-            oldString="1.10.2"
-            replacement="1.11.0"
+            oldString="1.0.0-alpha13"
+            replacement="1.0.14"
             priority="0"/>
         <location
             file="${:wear*projectDir}/build.gradle"
-            line="65"
+            line="64"
             column="20"
-            startOffset="2425"
-            endLine="65"
-            endColumn="75"
-            endOffset="2480"/>
+            startOffset="2355"
+            endLine="64"
+            endColumn="63"
+            endOffset="2398"/>
+    </incident>
+
+    <incident
+        id="Aligned16KB"
+        severity="warning"
+        message="The native library `arm64-v8a/libquickjs.so` (from `io.github.dokar3:quickjs-kt-android:1.0.0-alpha13`) is not 16 KB aligned">
+        <location
+            file="$GRADLE_USER_HOME/caches/9.0.0/transforms/299cfdf82480fe2469f32a7d7609cbd6/transformed/quickjs-release/jni/arm64-v8a/libquickjs.so"/>
     </incident>
 
     <incident

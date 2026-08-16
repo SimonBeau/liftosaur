@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.liftosaur.wear.spike.wear-mergeDebugResources-50:/values-km/values-km.xml",
+            "outputFile": "com.liftosaur.wear.spike.wear-mergeDebugResources-49:/values-km/values-km.xml",
             "map": [
                 {
                     "source": "C:\\Users\\simon\\.gradle\\caches\\9.0.0\\transforms\\28edfcd7e0709f54cc8b211090b73b4f\\transformed\\material-release\\res\\values-km\\values-km.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.liftosaur.wear.spike.wear-mergeDebugResources-50:/values-or/values-or.xml",
+            "outputFile": "com.liftosaur.wear.spike.wear-mergeDebugResources-49:/values-or/values-or.xml",
             "map": [
                 {
                     "source": "C:\\Users\\simon\\.gradle\\caches\\9.0.0\\transforms\\527473457bce51847da91800a33a3fce\\transformed\\foundation-release\\res\\values-or\\values-or.xml",

@@ -1,10 +1,9 @@
 package com.liftosaur.wear.spike
 
 import android.content.Context
-import androidx.javascriptengine.JavaScriptIsolate
-import androidx.javascriptengine.JavaScriptSandbox
+import com.dokar.quickjs.QuickJs
+import com.dokar.quickjs.evaluate
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.guava.await
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
@@ -17,31 +16,20 @@ sealed class EngineAvailability {
 
 class LiftosaurJsEngine(private val context: Context) : AutoCloseable {
     private val mutex = Mutex()
-    private var sandbox: JavaScriptSandbox? = null
-    private var isolate: JavaScriptIsolate? = null
+    private var quickJs: QuickJs? = null
 
     suspend fun initialize(): EngineAvailability = mutex.withLock {
-        if (isolate != null) return EngineAvailability.Supported
-        if (!JavaScriptSandbox.isSupported()) {
-            return EngineAvailability.Unsupported(
-                "AndroidX JavaScriptSandbox is not supported by this watch's installed WebView"
-            )
-        }
+        if (quickJs != null) return EngineAvailability.Supported
 
         return try {
-            val connected = JavaScriptSandbox.createConnectedInstanceAsync(context.applicationContext).await()
-            val createdIsolate = connected.createIsolate()
-            createdIsolate.addOnTerminatedCallback(context.mainExecutor) {
-                isolate = null
-            }
-            sandbox = connected
-            isolate = createdIsolate
+            val created = QuickJs.create(Dispatchers.Default)
+            quickJs = created
 
             val bundle = withContext(Dispatchers.IO) {
                 context.assets.open("watch-bundle.js").bufferedReader().use { it.readText() }
             }
-            createdIsolate.evaluateJavaScriptAsync(bundle).await()
-            val exposed = createdIsolate.evaluateJavaScriptAsync("typeof globalThis.Liftosaur").await()
+            created.evaluate<Any?>(bundle, filename = "watch-bundle.js")
+            val exposed = created.evaluate<String>("typeof globalThis.Liftosaur")
             if (exposed != "function") {
                 closeInternal()
                 EngineAvailability.Unsupported("watch-bundle.js loaded but Liftosaur was $exposed")
@@ -50,12 +38,12 @@ class LiftosaurJsEngine(private val context: Context) : AutoCloseable {
             }
         } catch (error: Throwable) {
             closeInternal()
-            EngineAvailability.Unsupported("JavaScriptSandbox initialization failed: ${error.message}")
+            EngineAvailability.Unsupported("Embedded QuickJS initialization failed: ${error.message}")
         }
     }
 
     suspend fun call(method: String, vararg arguments: Any?): JSONObject = mutex.withLock {
-        val activeIsolate = isolate ?: error("JavaScript engine is not initialized")
+        val activeQuickJs = quickJs ?: error("JavaScript engine is not initialized")
         val encoded = arguments.joinToString(",") { argument ->
             when (argument) {
                 null -> "undefined"
@@ -64,15 +52,13 @@ class LiftosaurJsEngine(private val context: Context) : AutoCloseable {
                 else -> error("Unsupported JavaScript argument: ${argument::class.java.simpleName}")
             }
         }
-        val result = activeIsolate.evaluateJavaScriptAsync("Liftosaur.$method($encoded)").await()
+        val result = activeQuickJs.evaluate<String>("Liftosaur.$method($encoded)")
         return JSONObject(result)
     }
 
     private fun closeInternal() {
-        isolate?.close()
-        sandbox?.close()
-        isolate = null
-        sandbox = null
+        quickJs?.close()
+        quickJs = null
     }
 
     override fun close() = closeInternal()

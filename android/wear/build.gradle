@@ -61,8 +61,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.9.1"
     implementation "androidx.lifecycle:lifecycle-runtime-compose:2.9.1"
     implementation "androidx.wear.compose:compose-material3:1.5.0"
-    implementation "androidx.javascriptengine:javascriptengine:1.1.0"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.10.2"
+    implementation "io.github.dokar3:quickjs-kt:1.0.0-alpha13"
 
     debugImplementation "androidx.compose.ui:ui-tooling"
     androidTestImplementation "androidx.test.ext:junit:1.2.1"

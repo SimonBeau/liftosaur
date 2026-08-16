@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.12.0" type="incidents">
+
+    <incident
+        id="Aligned16KB"
+        severity="warning"
+        message="The native library `arm64-v8a/libquickjs.so` (from `io.github.dokar3:quickjs-kt-android:1.0.0-alpha13`) is not 16 KB aligned">
+        <location
+            file="$GRADLE_USER_HOME/caches/9.0.0/transforms/299cfdf82480fe2469f32a7d7609cbd6/transformed/quickjs-release/jni/arm64-v8a/libquickjs.so"/>
+    </incident>
+
+</incidents>

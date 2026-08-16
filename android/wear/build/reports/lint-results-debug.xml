@@ -93,7 +93,7 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="C:\Users\simon\Documents\Git\liftosaur\android\wear\build.gradle"
-            line="68"
+            line="67"
             column="31"/>
     </issue>
 
@@ -109,24 +109,66 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="C:\Users\simon\Documents\Git\liftosaur\android\wear\build.gradle"
-            line="69"
+            line="68"
             column="31"/>
     </issue>
 
     <issue
         id="NewerVersionAvailable"
         severity="Warning"
-        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-guava than 1.10.2 is available: 1.11.0"
+        message="A newer version of io.github.dokar3:quickjs-kt than 1.0.0-alpha13 is available: 1.0.14"
         category="Correctness"
         priority="4"
         summary="Newer Library Versions Available"
         explanation="This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project. This is similar to the `GradleDependency` check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also **much** slower."
-        errorLine1="    implementation &quot;org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.10.2&quot;"
-        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="    implementation &quot;io.github.dokar3:quickjs-kt:1.0.0-alpha13&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="C:\Users\simon\Documents\Git\liftosaur\android\wear\build.gradle"
-            line="65"
+            line="64"
             column="20"/>
+    </issue>
+
+    <issue
+        id="Aligned16KB"
+        severity="Warning"
+        message="The native library `arm64-v8a/libquickjs.so` (from `io.github.dokar3:quickjs-kt-android:1.0.0-alpha13`) is not 16 KB aligned"
+        category="Correctness"
+        priority="2"
+        summary="Native library dependency not 16 KB aligned"
+        explanation="Android has traditionally used 4 KB memory page sizes. However, to support future devices that only work with 16 KB aligned libraries apps containing native libraries need to be built with 16 KB alignment.&#xA;&#xA;Apps with 4 KB aligned native libraries may not work correctly on devices requiring 16 KB alignment. To ensure compatibility and future-proof your app, it is strongly recommended that your native libraries are aligned to 16 KB boundaries.&#xA;&#xA;If your app uses any NDK libraries, directly or indirectly through an SDK, you should rebuild your app to meet this recommendation. Make sure all native libraries within your application, including those from dependencies, are built with 16 KB page alignment.&#xA;&#xA;This lint check looks at all native libraries that your app depends on. If any are found to be aligned to 4 KB instead of 16 KB, you will need to address this.&#xA;&#xA;When a library is flagged, first try to update to a newer version that supports 16 KB alignment. If an updated version is not available, contact the library vendor to ask about their plans for 16 KB support and request a compatible version. Updating your libraries proactively will help ensure your app works properly on a wider range of devices."
+        url="https://developer.android.com/guide/practices/page-sizes"
+        urls="https://developer.android.com/guide/practices/page-sizes">
+        <location
+            file="C:\Users\simon\.gradle\caches\9.0.0\transforms\299cfdf82480fe2469f32a7d7609cbd6\transformed\quickjs-release\jni\arm64-v8a\libquickjs.so"/>
+    </issue>
+
+    <issue
+        id="Aligned16KB"
+        severity="Warning"
+        message="The native library `arm64-v8a/libquickjs.so` (from `io.github.dokar3:quickjs-kt-android:1.0.0-alpha13`) is not 16 KB aligned"
+        category="Correctness"
+        priority="2"
+        summary="Native library dependency not 16 KB aligned"
+        explanation="Android has traditionally used 4 KB memory page sizes. However, to support future devices that only work with 16 KB aligned libraries apps containing native libraries need to be built with 16 KB alignment.&#xA;&#xA;Apps with 4 KB aligned native libraries may not work correctly on devices requiring 16 KB alignment. To ensure compatibility and future-proof your app, it is strongly recommended that your native libraries are aligned to 16 KB boundaries.&#xA;&#xA;If your app uses any NDK libraries, directly or indirectly through an SDK, you should rebuild your app to meet this recommendation. Make sure all native libraries within your application, including those from dependencies, are built with 16 KB page alignment.&#xA;&#xA;This lint check looks at all native libraries that your app depends on. If any are found to be aligned to 4 KB instead of 16 KB, you will need to address this.&#xA;&#xA;When a library is flagged, first try to update to a newer version that supports 16 KB alignment. If an updated version is not available, contact the library vendor to ask about their plans for 16 KB support and request a compatible version. Updating your libraries proactively will help ensure your app works properly on a wider range of devices."
+        url="https://developer.android.com/guide/practices/page-sizes"
+        urls="https://developer.android.com/guide/practices/page-sizes">
+        <location
+            file="C:\Users\simon\.gradle\caches\9.0.0\transforms\299cfdf82480fe2469f32a7d7609cbd6\transformed\quickjs-release\jni\arm64-v8a\libquickjs.so"/>
+    </issue>
+
+    <issue
+        id="Aligned16KB"
+        severity="Warning"
+        message="The native library `arm64-v8a/libquickjs.so` (from `io.github.dokar3:quickjs-kt-android:1.0.0-alpha13`) is not 16 KB aligned"
+        category="Correctness"
+        priority="2"
+        summary="Native library dependency not 16 KB aligned"
+        explanation="Android has traditionally used 4 KB memory page sizes. However, to support future devices that only work with 16 KB aligned libraries apps containing native libraries need to be built with 16 KB alignment.&#xA;&#xA;Apps with 4 KB aligned native libraries may not work correctly on devices requiring 16 KB alignment. To ensure compatibility and future-proof your app, it is strongly recommended that your native libraries are aligned to 16 KB boundaries.&#xA;&#xA;If your app uses any NDK libraries, directly or indirectly through an SDK, you should rebuild your app to meet this recommendation. Make sure all native libraries within your application, including those from dependencies, are built with 16 KB page alignment.&#xA;&#xA;This lint check looks at all native libraries that your app depends on. If any are found to be aligned to 4 KB instead of 16 KB, you will need to address this.&#xA;&#xA;When a library is flagged, first try to update to a newer version that supports 16 KB alignment. If an updated version is not available, contact the library vendor to ask about their plans for 16 KB support and request a compatible version. Updating your libraries proactively will help ensure your app works properly on a wider range of devices."
+        url="https://developer.android.com/guide/practices/page-sizes"
+        urls="https://developer.android.com/guide/practices/page-sizes">
+        <location
+            file="C:\Users\simon\.gradle\caches\9.0.0\transforms\299cfdf82480fe2469f32a7d7609cbd6\transformed\quickjs-release\jni\arm64-v8a\libquickjs.so"/>
     </issue>
 
     <issue
