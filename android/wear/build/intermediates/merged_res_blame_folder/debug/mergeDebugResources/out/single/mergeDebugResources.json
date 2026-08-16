@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.liftosaur.wear.spike.wear-debug-52:/drawable_ic_launcher.xml.flat",
+        "source": "com.liftosaur.wear.spike.wear-main-54:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "com.liftosaur.wear.spike.wear-debug-52:/xml_data_extraction_rules.xml.flat",
+        "source": "com.liftosaur.wear.spike.wear-main-54:/xml/data_extraction_rules.xml"
+    }
+]

@@ -1,0 +1,70 @@
+apply plugin: "com.android.application"
+apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "org.jetbrains.kotlin.plugin.compose"
+
+android {
+    namespace "com.liftosaur.wear.spike"
+    compileSdk rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.liftosaur.wear.spike"
+        minSdk 30
+        targetSdk rootProject.ext.targetSdkVersion
+        versionCode 360001
+        versionName "0.1-spike"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures { compose true }
+
+    sourceSets.main.assets.srcDir layout.buildDirectory.dir("generated/wearAssets")
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions { jvmTarget = "17" }
+
+    packagingOptions {
+        resources.excludes += "/META-INF/{AL2.0,LGPL2.1}"
+    }
+}
+
+def repoRoot = rootProject.projectDir.parentFile
+def buildWearAssets = tasks.register("buildWearAssets", Exec) {
+    workingDir repoRoot
+    environment "NODE_ENV", "production"
+    commandLine "npm.cmd", "run", "build:wear-assets"
+    inputs.file new File(repoRoot, "src/watch/index.ts")
+    inputs.dir new File(repoRoot, "src/models")
+    inputs.file new File(repoRoot, "webpack.config.js")
+    inputs.file new File(repoRoot, "webpack.watch.config.js")
+    inputs.file new File(repoRoot, "scripts/generate-wear-fixture.ts")
+    outputs.file new File(repoRoot, "dist/watch-bundle.js")
+    outputs.file new File(repoRoot, "dist/wear-spike-storage.json")
+}
+
+def copyWatchBundle = tasks.register("copyWatchBundle", Copy) {
+    dependsOn buildWearAssets
+    from new File(repoRoot, "dist")
+    include "watch-bundle.js", "wear-spike-storage.json"
+    into layout.buildDirectory.dir("generated/wearAssets")
+}
+
+tasks.named("preBuild").configure { dependsOn copyWatchBundle }
+
+dependencies {
+    implementation platform("androidx.compose:compose-bom:2025.06.01")
+    implementation "androidx.activity:activity-compose:1.10.1"
+    implementation "androidx.compose.ui:ui"
+    implementation "androidx.compose.ui:ui-tooling-preview"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.9.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-compose:2.9.1"
+    implementation "androidx.wear.compose:compose-material3:1.5.0"
+    implementation "androidx.javascriptengine:javascriptengine:1.1.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.10.2"
+
+    debugImplementation "androidx.compose.ui:ui-tooling"
+    androidTestImplementation "androidx.test.ext:junit:1.2.1"
+    androidTestImplementation "androidx.test:runner:1.6.2"
+}
